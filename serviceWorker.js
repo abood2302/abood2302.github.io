@@ -13,6 +13,11 @@ cacheArray = [
     './assets/'
 ]
 
+self.addEventListener('beforeinstallprompt',e=>{
+    app.promptEvent = e;
+    e.preventDefault();
+});
+
 self.addEventListener('install', e => {
     console.log('Service worker installed')
     e.waitUntil(
