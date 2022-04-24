@@ -2,7 +2,7 @@
     "name": "Nahawand",
     "short_name": "Nahawand",
     "start_url": ".",
-    "background_color": "#4dbf00",
+    "background_color": "#ffffff",
     "theme_color": "#ffffff",
     "display": "standalone",
     "icons": [
