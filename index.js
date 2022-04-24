@@ -179,7 +179,10 @@ rest.addEventListener('click', () => {
     submitTotal = 0
     // reset counter text
     sh_sm_count.textContent ='';
-    show.innerHTML = 'Daily Sales'
+    // reset temp variables
+    sh_sm_temp = 0
+    // fix xss bug
+    show.textContent = 'Daily Sales'
 
 })
 let monthSell = 0;
