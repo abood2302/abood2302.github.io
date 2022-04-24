@@ -7,7 +7,10 @@ cacheArray = [
     './assets/logo.webp',
     './index.html',
     './index.js',
-    './style.css'
+    './style.css',
+    './serviceWorker.js',
+    './manifest.json',
+    './assets/'
 ]
 
 self.addEventListener('install', e => {
