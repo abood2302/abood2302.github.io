@@ -1,0 +1,21 @@
+{
+    "name": "Nahawand",
+    "short_name": "Nahawand",
+    "start_url": ".",
+    "background_color": "#4dbf00",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./assets/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

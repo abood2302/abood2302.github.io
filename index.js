@@ -1,3 +1,12 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js').then(registeration=>{
+        console.log("Service worker registered")
+    }).catch(error=>{
+        console.log("Service worker registeration failed");
+        console.log(error);
+    })
+}
+
 const sh_sm = document.getElementById('small')
 const sh_sm_count = document.getElementById('shawerma-small-count');
 const sh_sm_add = document.getElementById('sh-sm-add')
@@ -37,7 +46,7 @@ let input = document.querySelector('input')
 const submit = document.querySelector('.submit')
 
 // get current month and update button text dynamically
-const currentMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const currentMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 const d = new Date();
 let monthtext = currentMonth[d.getMonth()];
@@ -46,7 +55,7 @@ byMonth.textContent = monthtext + " sales report"
 
 currentdate = new Date()
 datestringelement = document.getElementById('datestring')
-dateString = `${new Date().toLocaleDateString('en-GB', { weekday: 'long' })} ${currentdate.getDate()} ${monthtext} ${currentdate.getFullYear()}`
+dateString = `${new Date().toLocaleDateString('en-GB', { weekday: 'short' })} ${currentdate.getDate()} ${monthtext} ${currentdate.getFullYear()}`
 datestringelement.textContent = dateString
 
 
