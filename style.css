@@ -16,7 +16,7 @@ body {
     align-items: center;
     color: black;
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 #month {
@@ -27,12 +27,13 @@ body {
 
 .shwarma {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .shawarma-button-container{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: relative;
     justify-content: center
@@ -40,22 +41,18 @@ body {
 
 .count{
     position: absolute;
-    top: 1.7em;
-    right: 2em;
-    left: 3.5em;
+    right: 10vw;
+    top: .125vw;
+    bottom: .125vw;
 }
 
 .plus{
-    position: absolute;
     right: 1px;
     cursor: pointer;
-    top: 3rem;
 }
 
 .minus{
-    position: absolute;
-    left: 21px;
-    top: 3rem;
+    left: 1px;
     cursor: pointer;
 }
 
@@ -69,14 +66,15 @@ body {
     font-size: 20px;
     height: 36px;
     line-height: 27px;
-    min-width: 54px;
+    min-width: 70vw;
     padding: 0 16px;
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: pre;
-    margin-left: 20px;
+    margin: 10px;
+    margin-top: 10px;
 }
 
 .shwarma button:hover {

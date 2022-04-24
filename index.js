@@ -53,7 +53,7 @@ datestringelement.textContent = dateString
 
 const lastTotalAtTheDay = []
 
-// shwarma button 
+// shwarma button logic
 
 let totalShawrmaByDay = 0;
 var sh_sm_temp = 0
@@ -61,19 +61,31 @@ var sh_sm_temp = 0
 sh_sm.addEventListener('click', () => {
     totalShawrmaByDay += 6
     sh_sm_temp = sh_sm_temp + 1
-    sh_sm_count.textContent = sh_sm_temp
+    if (sh_sm_temp>0) {
+        sh_sm_count.textContent = sh_sm_temp
+    } else {
+        sh_sm_count.textContent = '0'
+    }
 })
 
 sh_sm_add.addEventListener('click', () => {
     totalShawrmaByDay += 6
     sh_sm_temp = sh_sm_temp + 1
-    sh_sm_count.textContent = sh_sm_temp
+    if (sh_sm_temp>0) {
+        sh_sm_count.textContent = sh_sm_temp
+    } else {
+        sh_sm_count.textContent = '0'
+    }
 })
 
 sh_sm_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 6
-    sh_sm_temp = sh_sm_temp - 1
-    sh_sm_count.textContent = sh_sm_temp
+    sh_sm_temp = sh_sm_temp -1
+    if (sh_sm_temp>0) {
+        sh_sm_count.textContent = sh_sm_temp
+    } else {
+        sh_sm_count.textContent = '0'
+    }
 })
 
 sh_sm_ch.addEventListener('click', () => {
@@ -167,8 +179,7 @@ rest.addEventListener('click', () => {
     submitTotal = 0
     // reset counter text
     sh_sm_count.textContent ='';
-    // fix a cross-site scripting bug
-    show.textContent = "Daily sales"
+    show.innerHTML = 'Daily Sales'
 
 })
 let monthSell = 0;
