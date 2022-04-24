@@ -35,25 +35,26 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: center
 }
 
 .count{
     position: absolute;
     top: 1.7em;
     right: 2em;
-    text-align: center;
+    left: 3.5em;
 }
 
 .plus{
     position: absolute;
-    right: 5px;
-    top: 3rem;
+    right: 1px;
     cursor: pointer;
+    top: 3rem;
 }
 
 .minus{
     position: absolute;
-    left: 30px;
+    left: 21px;
     top: 3rem;
     cursor: pointer;
 }

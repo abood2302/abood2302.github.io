@@ -167,7 +167,8 @@ rest.addEventListener('click', () => {
     submitTotal = 0
     // reset counter text
     sh_sm_count.textContent ='';
-    show.innerHTML = 'your sell by day'
+    // fix a cross-site scripting bug
+    show.textContent = "Daily sales"
 
 })
 let monthSell = 0;
