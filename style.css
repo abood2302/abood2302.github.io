@@ -33,6 +33,7 @@ body {
 }
 
 .shawarma-button-container{
+    /* align contents of the container beside each other */
     display: inline-flex;
     align-items: center;
     position: relative;
