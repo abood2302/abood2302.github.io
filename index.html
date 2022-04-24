@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>nahwand</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Nahawand Shawerma Corner</title>
 </head>
-<body>
-    <h1 class="conter">Nahwand conter </h1>
-    <h1 class="titel_sh">shawrma</h1>
-    <div class="shwarma">
-        <button class="sh-s">smalll</button>
 
-        <button class="sh-ch" value="65">smalll&chesse</button>    
-        <button class="sh-l"> large</button>
-        <button class="sh-lc">large&chesse</button>
-        <button class="sh-a">Arabic</button>
-        <button class="sh-ac">Arabic&chesse</button>
-        <button class="frise">frise</button>
+<body>
+    <div class="header">
+        <img src="./assets/logo.webp" width="256" height="256">
+        <h2>Nahawand Shawerma Counter</h2>
+        <h3 id="datestring"></h3>
+    </div>
+
+    <div class="titel_sh">
+        <h1>Shawerma</h1>
+    </div>
+
+    <div class="shwarma">
+        <div class="shawarma-button-container">
+            <i class="bi bi-plus-circle plus" id="sh-sm-add"></i>
+            <button id="small">small</button>
+            <i class="bi bi-dash-circle minus" id="sh-sm-remove"></i>
+            <h4 class="count" id="shawerma-small-count"></h4>
+        </div>
+        <button id="small-cheese" value="65">smalll&chesse</button>
+        <button id="large"> large</button>
+        <button id="large-cheese">large&chesse</button>
+        <button id="arabic">Arabic</button>
+        <button id="arabic-cheese">Arabic&chesse</button>
+        <button id="fries">fries</button>
     </div>
     <h1 class="titel_pizza">pizza</h1>
     <div class="pizza">
-        <button id="pizza">pizza</button>
-        <input type="number" id="##">
-        <button  class = "submit" for="##">submit</button>
+        <input type="number" min="1" value="1">
+        <button class="submit" id="pizza" for="##">submit</button>
     </div>
     <h1 class="titel_pastries">pastries</h1>
     <div class="pastries">
-        <button id="pa_5">pastries5RM</button>
-        <button id="pa_3">pastries3RM</button>
-        <button id="pa_2">pastries2RM</button>
+        <button id="pa_5">5 RM</button>
+        <button id="pa_3">3 RM</button>
+        <button id="pa_2">2 RM</button>
     </div>
-    <button id="daytotal"> day total report</button>
-    <h3 id="show-info"> your day total sell is </h3>
+    <h3 id="show-info"> Total Sales </h3>
+
     <div class="final">
-        <button id="rest">rest your day</button>
+        <button id="rest">Reset day</button>
+        <button id="daytotal"> Today's sales report</button>
         <button id="getbymonth"> your sell by month</button>
     </div>
-    
+
     <h3 id="month"></h3>
-   
+
 
     <script src="index.js"></script>
-   
-  
+
+
 </body>
+
 </html>

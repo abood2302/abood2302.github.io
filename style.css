@@ -1,11 +1,22 @@
+/* create custom color variables */
+:root {
+    --brand: #4dbf00;
+}
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: #fff;
+    font-family: Helvetica, sans-serif
+}
 
+.header {
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: space-between;
+    margin: 0 20px;
 }
 
 #month {
@@ -14,88 +25,100 @@ body {
     border-radius: 2px;
 }
 
-.conter {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: skyblue;
-}
-
 .shwarma {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shawarma-button-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.count{
+    position: absolute;
+    top: 1.7em;
+    right: 2em;
+    text-align: center;
+}
+
+.plus{
+    position: absolute;
+    right: 5px;
+    top: 3rem;
+    cursor: pointer;
+}
+
+.minus{
+    position: absolute;
+    left: 30px;
+    top: 3rem;
+    cursor: pointer;
 }
 
 .shwarma button {
-    background: linear-gradient(to bottom right, #24243e, #0f0c29);
-    border: 0;
-    border-radius: 12px;
-    color: #FFFFFF;
+    background-color: #fff;
+    border: 1px solid var(--brand);
+    border-radius: 4px;
+    color: #3c4043;
     cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: arial, sans-serif;
     font-size: 20px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
     text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    white-space: nowrap;
-    width: 14%;
-    /* font-size: 5px; */
-    padding: 0;
-    margin: 0;
+    white-space: pre;
+    margin-left: 20px;
 }
+
+.shwarma button:hover {
+    border-color: var(--brand);
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+}
+
+.shwarma button:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
 
 .titel_sh {
     text-align: center;
-    color: #0dccea;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .titel_pizza {
     text-align: center;
-    color: #0d70ea;
+    color: #000;
 }
 
-input {
-    margin-top: 30px;
-}
 
 .submit {
-    background-color: #a8c0ff;
+    margin-left: 10px;
+    background-color: #fff;
     cursor: pointer;
     border-radius: 4px;
-    border: 1px solid #0f0c29;
+    font-size: 20px;
+    border: 1px solid var(--brand);
 }
 
 .pizza {
     text-align: center;
-    padding: 20px;
 }
 
-#pizza {
-    background-image: linear-gradient(#0dccea, #0d70ea);
-    border: 0;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: Montserrat, sans-serif;
-    font-size: .9em;
-    /* margin: 5px; */
-    /* padding: 10px 15px; */
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 80px;
-    text-align: center;
-}
+
 
 .pastries {
     display: flex;
@@ -103,38 +126,55 @@ input {
 }
 
 .pastries button {
-    padding: 0;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    font-size: 10px;
-    border: 1px solid;
-    background: #a8c0ff;
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);
-    color: white;
+    background-color: #fff;
+    border: 1px solid var(--brand);
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember", sans-serif;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;
+}
 
+.pastries button:hover {
+    background-color: #f7fafa;
+}
+
+.pastries button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
 }
 
 .titel_pastries {
     text-align: center;
-    color: #0d70ea;
+    color: #000;
 
 }
 
 #daytotal {
     display: flex;
-    background-color: red;
     text-align: center;
-    margin-left: 30%;
-    margin-bottom: 30px;
     cursor: pointer;
 }
 
 #show-info {
-    color: red;
+    color: black;
     text-align: center;
     border: 1px solid black;
-    margin-bottom: 30px;
+    margin: 30px 20px;
 }
 
 .final {
@@ -143,165 +183,30 @@ input {
 }
 
 .final button {
-    background-color: #e1ecf4;
-    border-radius: 3px;
-    border: 1px solid #7aa7c7;
-    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
-    color: #39739d;
+    color: #fff;
     cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.15385;
-    margin: 0;
-    outline: none;
-    padding: 8px .8em;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0 20px;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
     position: relative;
-    text-align: center;
     text-decoration: none;
+    transition: all 250ms;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
-    white-space: nowrap;
-}
-
-.final button,
-.final button:focus {
-    background-color: #b3d3ea;
-    color: #2c5777;
-}
-
-.final button:focus {
-    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.final button:active {
-    background-color: #a0c7e4;
-    box-shadow: none;
-    color: #2c5777;
-}
-
-
-/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-
-@media screen and (min-width: 320px) and (max-width : 480px) {
-
-    #show-info {
-        color: red;
-        text-align: center;
-        border: 1px solid black;
-        margin-bottom: 30px;
-
-    }
-
-    .conter {
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        color: skyblue;
-    }
-
-    .shwarma {
-        display: flex;
-    }
-
-    .shwarma button {
-        background: linear-gradient(to bottom right, #24243e, #0f0c29);
-        border: 0;
-        border-radius: 12px;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: inline-block;
-        font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 2.5;
-        outline: transparent;
-        padding: 0 1rem;
-        text-align: center;
-        text-decoration: none;
-        transition: box-shadow .2s ease-in-out;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        white-space: nowrap;
-        width: 14%;
-        font-size: 5px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .titel_sh {
-        text-align: center;
-        color: #0dccea;
-    }
-
-    @media screen and (min-width: 480px) {
-        body {
-            background-color: black;
-        }
-    }
-
-    .titel_pizza {
-        text-align: center;
-        color: #0d70ea;
-    }
-
-    .pizza {
-        text-align: center;
-        padding: 20px;
-    }
-
-    #pizza {
-        background-image: linear-gradient(#0dccea, #0d70ea);
-        border: 0;
-        border-radius: 4px;
-        box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        font-family: Montserrat, sans-serif;
-        font-size: .9em;
-        /* margin: 5px; */
-        /* padding: 10px 15px; */
-        text-align: center;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        width: 80px;
-        text-align: center;
-    }
-
-    .pastries {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .pastries button {
-        padding: 0;
-        margin-bottom: 20px;
-        border-radius: 4px;
-        font-size: 10px;
-        border: 1px solid;
-        background: #a8c0ff;
-        background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-        background: linear-gradient(to right, #3f2b96, #a8c0ff);
-        color: white;
-
-    }
-
-    input {
-        margin-top: 30px;
-    }
-
-    .submit {
-        background-color: #a8c0ff;
-        cursor: pointer;
-        border-radius: 4px;
-        border: 1px solid #0f0c29;
-    }
-
-
+    width: auto;
 }

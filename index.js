@@ -1,10 +1,26 @@
-const sh_sm = document.querySelector('.sh-s')
-const sh_sm_ch = document.querySelector('.sh-ch')
-const sh_l = document.querySelector('.sh-l')
-const sh_l_ch = document.querySelector('.sh-lc')
-const sh_ar = document.querySelector(".sh-a")
-const sh_ar_ch = document.querySelector('.sh-ac')
-const frise = document.querySelector('.frise')
+const sh_sm = document.getElementById('small')
+const sh_sm_count = document.getElementById('shawerma-small-count');
+const sh_sm_add = document.getElementById('sh-sm-add')
+const sh_sm_remove = document.getElementById("sh-sm-remove")
+
+const sh_sm_ch = document.getElementById('small-cheese')
+
+
+const sh_l = document.getElementById('large')
+
+
+const sh_l_ch = document.getElementById('large-cheese')
+
+
+const sh_ar = document.getElementById("arabic")
+
+
+const sh_ar_ch = document.getElementById('arabic-cheese')
+
+
+const frise = document.getElementById('fries')
+
+
 const sh_total = document.querySelector('#shwarma-total')
 const piiza_butoon = document.querySelector('#pizza')
 const pizza_total = document.querySelector('#pizza_total')
@@ -20,17 +36,44 @@ const month = document.getElementById('month')
 let input = document.querySelector('input')
 const submit = document.querySelector('.submit')
 
+// get current month and update button text dynamically
+const currentMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const d = new Date();
+let monthtext = currentMonth[d.getMonth()];
+
+byMonth.textContent = monthtext + " sales report"
+
+currentdate = new Date()
+datestringelement = document.getElementById('datestring')
+dateString = `${new Date().toLocaleDateString('en-GB', { weekday: 'long' })} ${currentdate.getDate()} ${monthtext} ${currentdate.getFullYear()}`
+datestringelement.textContent = dateString
+
+
 
 const lastTotalAtTheDay = []
 
 // shwarma button 
 
 let totalShawrmaByDay = 0;
-
+var sh_sm_temp = 0
 
 sh_sm.addEventListener('click', () => {
     totalShawrmaByDay += 6
-    console.log(totalShawrmaByDay);
+    sh_sm_temp = sh_sm_temp + 1
+    sh_sm_count.textContent = sh_sm_temp
+})
+
+sh_sm_add.addEventListener('click', () => {
+    totalShawrmaByDay += 6
+    sh_sm_temp = sh_sm_temp + 1
+    sh_sm_count.textContent = sh_sm_temp
+})
+
+sh_sm_remove.addEventListener('click', () => {
+    totalShawrmaByDay -= 6
+    sh_sm_temp = sh_sm_temp - 1
+    sh_sm_count.textContent = sh_sm_temp
 })
 
 sh_sm_ch.addEventListener('click', () => {
@@ -66,7 +109,7 @@ frise.addEventListener('click', () => {
 // pizza button
 let totalPizza = 0;
 piiza_butoon.addEventListener('click', () => {
-    totalPizza += 16
+    totalPizza += 16 - 1 // pizza button decrement to accomadate for the starting value of 1
     console.log(totalPizza);
 });
 
@@ -122,7 +165,8 @@ rest.addEventListener('click', () => {
     totalPizza = 0
     totalShawrmaByDay = 0
     submitTotal = 0
-
+    // reset counter text
+    sh_sm_count.textContent ='';
     show.innerHTML = 'your sell by day'
 
 })
