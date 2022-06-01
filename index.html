@@ -21,40 +21,86 @@
 </head>
 
 <body>
-    <div class="header">
-        <img src="./assets/logo.webp" width="128" height="128">
-        <h3 id="datestring"></h3>
-    </div>
-
-    <div class="titel_sh">
-        <h1>Shawerma</h1>
-    </div>
-
     <div class="shwarma">
-        <div class="shawarma-button-container">
-            <i class="bi bi-dash-circle minus" id="sh-sm-remove"></i>
-            <button id="small">small</button>
-            <i class="bi bi-plus-circle plus" id="sh-sm-add"></i>
-            <h4 class="count" id="shawerma-small-count"></h4>
+        <div class="container">
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="sh-sm-remove"></i>
+                <button id="small">sm </button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+                
+            </div>
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="sh-sm-ch-remove"></i>
+                <button id="small-cheese" >sm&ch</button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="sh-la-remove"></i>
+                <button id="large"> larg</button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="sh-la-ch-remove"></i>
+                <button id="large-cheese">la&ch</button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
         </div>
-        <button id="small-cheese" value="65">smalll&chesse</button>
-        <button id="large"> large</button>
-        <button id="large-cheese">large&chesse</button>
-        <button id="arabic">Arabic</button>
-        <button id="arabic-cheese">Arabic&chesse</button>
-        <button id="fries">fries</button>
+        <div class="container-tow">
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="sh-ar-remove"></i>
+                <button id="arabic">Arabic </button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="ar-ch-remove"></i>
+                <button id="arabic-cheese">Ar&ch</button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
+            <div class="shawarma-button-container">
+                <i class="bi bi-dash-circle minus" id="fries-remove"></i>
+                <button id="fries">fries</button>
+                <!-- <i class="bi bi-plus-circle plus" id="sh-sm-add"></i> -->
+            </div>
+        </div>
     </div>
-    <h1 class="titel_pizza">pizza</h1>
+  
     <div class="pizza">
-        <input type="number" min="1" value="1" name="pizzaInput">
-        <button class="submit" id="pizza" for="##">submit</button>
+        <input type="number" >
+        <div class="pizzholder">
+            <div class="pizzacontainer">
+                <button id="submit" class="submit">submit</button>
+            </div>
+            <div class="pizzacontainer">
+                <i class="bi bi-dash-circle minus" id="pizza_remove"></i>
+                <button  class="submit" id="pizza">pizza</button>
+            </div>
+            <div class="pizzacontainer">
+                <i class="bi bi-dash-circle minus" id="chic_remove"></i>
+                <button id="chiken" class="submit">chic</button>
+            </div>
+        </div>
+      
     </div>
-    <h1 class="titel_pastries">pastries</h1>
+  
     <div class="pastries">
-        <button id="pa_5">5 RM</button>
-        <button id="pa_3">3 RM</button>
-        <button id="pa_2">2 RM</button>
+        <div class="pastries-container">
+            <i class="bi bi-dash-circle minus" id="pastries5_remove"></i>
+            <button id="pa_5">5 RM</button>
+        </div>
+        <div class="pastries-container">
+            <i class="bi bi-dash-circle minus" id="pastries3_remove"></i>
+            <button id="pa_3">3 RM</button>
+        </div>
+        <div class="pastries-container">
+            <i class="bi bi-dash-circle minus" id="pastries2_remove"></i>
+            <button id="pa_2">2 RM</button>
+        </div>
     </div>
+    <div class="perant">
+        <button id="totalorder" class="order" > ok</button>
+        <span id="show_totalorder">  total order</span>
+    </div>
+   
     <h3 id="show-info"> Total Sales </h3>
 
     <div class="final">
