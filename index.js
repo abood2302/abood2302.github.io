@@ -44,12 +44,16 @@ const month = document.getElementById('month')
 let input = document.querySelector('input')
 const submit = document.getElementById('submit')
 const totalorder = document.getElementById('totalorder');
-const showOrderInfo = document.getElementById('show_totalorder')
+const showOrderInfo = document.getElementById('show_totalorder');
+const eachorder = document.getElementById('last')
+const clear = document.getElementById('clear')
 
 
 const lastTotalAtTheDay = []
 
 // shwarma button logic
+
+let orderDet = 0;
 
 let totalShawrmaByDay = 0;
 let sh_temp = 0
@@ -59,6 +63,9 @@ let totalOrder = 0;
 sh_sm.addEventListener('click', () => {
     totalShawrmaByDay += 6
     totalOrder += 6
+    orderDet += 6
+    eachorder.textContent = `you add ${orderDet}`
+
 })
 
 
@@ -66,60 +73,68 @@ sh_sm_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 6
 
     totalOrder -= 6
+    orderDet -= 6
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_sm_ch.addEventListener('click', () => {
     totalShawrmaByDay += 7
     totalOrder += 7
+    orderDet += 7
+    eachorder.textContent = `you add ${orderDet}`
     console.log(totalShawrmaByDay);
 })
 
 sh_sm_ch_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 7
-
     totalOrder -= 7
+    orderDet -= 7
+    eachorder.textContent = `you remove ${orderDet}`
 
 })
 
 sh_l.addEventListener('click', () => {
     totalShawrmaByDay += 9
-
     console.log(totalShawrmaByDay);
     totalOrder += 9
+    orderDet += 9
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_la_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 9
-
-
     totalOrder -= 9
+    orderDet -= 9
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_l_ch.addEventListener('click', () => {
     totalShawrmaByDay += 11
-
     console.log(totalShawrmaByDay);
     totalOrder += 11
+    orderDet += 11
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_la_ch_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 11
-
     totalOrder -= 11
+    orderDet -= 11
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_ar.addEventListener('click', () => {
     totalShawrmaByDay += 16
-
     console.log(totalShawrmaByDay);
-    totalOrder += 16
+    orderDet += 16
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_ar_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 16
-
-
     totalOrder -= 16
+    orderDet -= 16
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_ar_ch.addEventListener('click', () => {
@@ -127,22 +142,29 @@ sh_ar_ch.addEventListener('click', () => {
 
     console.log(totalShawrmaByDay);
     totalOrder += 18
+    orderDet += 18
+    eachorder.textContent = `you add ${orderDet}`
 })
 ar_ch_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 18
     totalOrder -= 18
+    orderDet += 18
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 frise.addEventListener('click', () => {
     totalShawrmaByDay += 6
     console.log(totalShawrmaByDay);
     totalOrder += 6
+    orderDet += 6
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 fries_remove.addEventListener('click', () => {
     totalShawrmaByDay -= 6
-
     totalOrder -= 6
+    orderDet -= 6
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 // pizza button
@@ -151,24 +173,32 @@ piiza_butoon.addEventListener('click', () => {
     totalPizza += 16
     totalOrder += 16
     console.log(totalPizza);
+    orderDet += 16
+    eachorder.textContent = `you add ${orderDet}`
 });
 
 pizza_remove.addEventListener('click', () => {
     totalPizza -= 16
     totalOrder -= 16
     console.log(totalPizza);
+    orderDet -= 16
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 chiken.addEventListener('click', () => {
     totalPizza += 17;
     totalOrder += 17
     console.log(totalPizza);
+    orderDet += 17
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 chic_remove.addEventListener('click', () => {
     totalPizza -= 17
     totalOrder -= 17
     console.log(totalPizza);
+    orderDet -= 17
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 
@@ -183,6 +213,7 @@ submit.addEventListener('click', () => {
     submitTotal += inputValue
     console.log(inputValue);
     console.log(submitTotal);
+    input.value = '';
 })
 
 // pastries total 
@@ -193,24 +224,32 @@ pa_five.addEventListener('click', () => {
     totalPastries += 5
     totalOrder += 5
     console.log(totalPastries);
+    orderDet += 5
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries5_remove.addEventListener('click', () => {
     totalPastries -= 5
     totalOrder -= 5
     console.log(totalPastries);
+    orderDet -= 5
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 pa_three.addEventListener('click', () => {
     totalPastries += 3
     totalOrder += 3
     console.log(totalPastries);
+    orderDet += 3
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries3_remove.addEventListener('click', () => {
     totalPastries -= 3
     totalOrder -= 3
     console.log(totalPastries);
+    orderDet -= 3
+    eachorder.textContent = `you remove ${orderDet}`
 })
 
 
@@ -219,18 +258,28 @@ pa_tow.addEventListener('click', () => {
     totalPastries += 2
     totalOrder += 2
     console.log(totalPastries);
+    orderDet += 2
+    eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries2_remove.addEventListener('click', () => {
     totalPastries -= 2
     totalOrder -= 2
     console.log(totalPastries);
+    orderDet -= 2
+    eachorder.textContent = `you add ${orderDet}`
+})
+
+clear.addEventListener('click', () => {
+    eachorder.textContent = 'the next order is';
+    orderDet = 0;
 })
 
 
 totalorder.addEventListener('click', () => {
     showOrderInfo.innerHTML = totalOrder
     totalOrder = 0
+    console.log(totalOrder);
 })
 
 showOrderInfo.innerHTML = ' total order'
@@ -276,5 +325,5 @@ byMonth.addEventListener('click', () => {
 });
 
 
-
+// eachorder.textContent = ` You enter ${totalShawrmaByDay}`
 
