@@ -49,7 +49,9 @@ const eachorder = document.getElementById('last')
 const clear = document.getElementById('clear')
 
 
-const lastTotalAtTheDay = []
+let lastTotalAtTheDay = []
+
+let totalOrderarr = []
 
 // shwarma button logic
 
@@ -61,8 +63,8 @@ let pizza_temp = 0;
 let totalOrder = 0;
 
 sh_sm.addEventListener('click', () => {
-    totalShawrmaByDay += 6
-    totalOrder += 6
+    totalOrderarr.push(6)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 6
     eachorder.textContent = `you add ${orderDet}`
 
@@ -70,133 +72,124 @@ sh_sm.addEventListener('click', () => {
 
 
 sh_sm_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 6
-
-    totalOrder -= 6
+    totalOrderarr.push(-6)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 6
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_sm_ch.addEventListener('click', () => {
-    totalShawrmaByDay += 7
-    totalOrder += 7
+    totalOrderarr.push(7)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 7
     eachorder.textContent = `you add ${orderDet}`
     console.log(totalShawrmaByDay);
 })
 
 sh_sm_ch_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 7
-    totalOrder -= 7
+    totalOrderarr.push(-7)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 7
     eachorder.textContent = `you remove ${orderDet}`
 
 })
 
 sh_l.addEventListener('click', () => {
-    totalShawrmaByDay += 9
-    console.log(totalShawrmaByDay);
-    totalOrder += 9
+    totalOrderarr.push(9)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
+
     orderDet += 9
     eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_la_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 9
-    totalOrder -= 9
+    totalOrderarr.push(-9)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 9
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_l_ch.addEventListener('click', () => {
-    totalShawrmaByDay += 11
-    console.log(totalShawrmaByDay);
-    totalOrder += 11
+    totalOrderarr.push(11)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 11
     eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_la_ch_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 11
-    totalOrder -= 11
+    totalOrderarr.push(-11)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 11
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_ar.addEventListener('click', () => {
-    totalShawrmaByDay += 16
-    console.log(totalShawrmaByDay);
+    totalOrderarr.push(16)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 16
     eachorder.textContent = `you add ${orderDet}`
 })
 
 sh_ar_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 16
-    totalOrder -= 16
+    totalOrderarr.push(16)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 16
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 sh_ar_ch.addEventListener('click', () => {
-    totalShawrmaByDay += 18
-
-    console.log(totalShawrmaByDay);
-    totalOrder += 18
+    totalOrderarr.push(18)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 18
     eachorder.textContent = `you add ${orderDet}`
 })
 ar_ch_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 18
-    totalOrder -= 18
+    totalOrderarr.push(-18)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 18
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 frise.addEventListener('click', () => {
-    totalShawrmaByDay += 6
-    console.log(totalShawrmaByDay);
-    totalOrder += 6
+    totalOrderarr.push(6)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 6
     eachorder.textContent = `you add ${orderDet}`
 })
 
 fries_remove.addEventListener('click', () => {
-    totalShawrmaByDay -= 6
-    totalOrder -= 6
+    totalOrderarr.push(-6)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 6
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 // pizza button
-let totalPizza = 0;
+
 piiza_butoon.addEventListener('click', () => {
-    totalPizza += 16
-    totalOrder += 16
-    console.log(totalPizza);
+    totalOrderarr.push(16)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 16
     eachorder.textContent = `you add ${orderDet}`
 });
 
 pizza_remove.addEventListener('click', () => {
-    totalPizza -= 16
-    totalOrder -= 16
-    console.log(totalPizza);
+    totalOrderarr.push(-16)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 16
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 chiken.addEventListener('click', () => {
-    totalPizza += 17;
-    totalOrder += 17
-    console.log(totalPizza);
+    totalOrderarr.push(17)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 17
     eachorder.textContent = `you add ${orderDet}`
 })
 
 chic_remove.addEventListener('click', () => {
-    totalPizza -= 17
-    totalOrder -= 17
-    console.log(totalPizza);
+    totalOrderarr.push(-17)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 17
     eachorder.textContent = `you remove ${orderDet}`
 })
@@ -211,8 +204,8 @@ let submitTotal = 0;
 submit.addEventListener('click', () => {
     let inputValue = +input.value
     submitTotal += inputValue
-    console.log(inputValue);
-    console.log(submitTotal);
+    totalOrderarr.push()
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     input.value = '';
 })
 
@@ -221,33 +214,29 @@ submit.addEventListener('click', () => {
 let totalPastries = 0;
 
 pa_five.addEventListener('click', () => {
-    totalPastries += 5
-    totalOrder += 5
-    console.log(totalPastries);
+    totalOrderarr.push(5)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 5
     eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries5_remove.addEventListener('click', () => {
-    totalPastries -= 5
-    totalOrder -= 5
-    console.log(totalPastries);
+    totalOrderarr.push(-5)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 5
     eachorder.textContent = `you remove ${orderDet}`
 })
 
 pa_three.addEventListener('click', () => {
-    totalPastries += 3
-    totalOrder += 3
-    console.log(totalPastries);
+    totalOrderarr.push(3)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet += 3
     eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries3_remove.addEventListener('click', () => {
-    totalPastries -= 3
-    totalOrder -= 3
-    console.log(totalPastries);
+    totalOrderarr.push(-3)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 3
     eachorder.textContent = `you remove ${orderDet}`
 })
@@ -255,17 +244,16 @@ pastries3_remove.addEventListener('click', () => {
 
 
 pa_tow.addEventListener('click', () => {
-    totalPastries += 2
-    totalOrder += 2
-    console.log(totalPastries);
+    totalOrderarr.push(2)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
+
     orderDet += 2
     eachorder.textContent = `you add ${orderDet}`
 })
 
 pastries2_remove.addEventListener('click', () => {
-    totalPastries -= 2
-    totalOrder -= 2
-    console.log(totalPastries);
+    totalOrderarr.push(-2)
+    localStorage.setItem('order', JSON.stringify(totalOrderarr))
     orderDet -= 2
     eachorder.textContent = `you add ${orderDet}`
 })
@@ -286,25 +274,45 @@ showOrderInfo.innerHTML = ' total order'
 
 let totalDaySell = 0;
 dayTotal.addEventListener('click', () => {
-    totalDaySell = totalShawrmaByDay + totalPastries + totalPizza + submitTotal;
-    console.log(totalDaySell);
+    // totalDaySell = totalShawrmaByDay + totalPastries + totalPizza + submitTotal;
+    // console.log(totalDaySell);
+    const arr = (JSON.parse(localStorage.getItem('order')))
+
+    for (let i = 0; i < arr.length; i++) {
+        let x = arr[i];
+        totalDaySell += x
+        console.log('its work ');
+    }
     show.innerHTML = totalDaySell
     lastTotalAtTheDay.push(totalDaySell)
-    // localStorage.setItem('item1', JSON.stringify(lastTotalAtTheDay))
     localStorage.setItem('item1', JSON.stringify(lastTotalAtTheDay))
+
+    // localStorage.removeItem('order')
+
 
     // localStorage.setItem('item1', JSON.stringify(lastTotalAtTheDay))
     // console.log(JSON.parse(localStorage.getItem('item1')));
 })
 
+
+
 rest.addEventListener('click', () => {
-    totalPastries = 0
-    totalPizza = 0
-    totalShawrmaByDay = 0
-    submitTotal = 0
+    // localStorage.length = 0
+    // let storge = (JSON.parse(localStorage.getItem('order')))
+    // const valueArry = storge.values();
+    totalDaySell = 0
+
+    totalOrderarr = []
+    var order = []
+    localStorage.setItem("order", JSON.stringify(order));
+
+    //localStorage.removeItem('order')
+    // const newArry = []
+    // totalOrderarr = newArry
+
 
     show.textContent = 'Daily Sales'
-
+    console.log(totalOrderarr);
 })
 let monthSell = 0;
 
@@ -320,7 +328,7 @@ byMonth.addEventListener('click', () => {
     month.innerHTML = monthSell
     console.log(arr);
     localStorage.removeItem('item1')
-
+    lastTotalAtTheDay = []
 
 });
 
